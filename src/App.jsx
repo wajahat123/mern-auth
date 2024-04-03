@@ -1,24 +1,27 @@
 import React from 'react'
+import { BrowserRouter,Routes,Route } from 'react-router-dom'
+import Home from './pages/Home'
+import About from './pages/About'
+import Signup from './pages/Signup'
+import Signin from './pages/Signin'
+import Profile from './pages/Profile'
+
 
 const App = () => {
   return (
     <>
-      <nav className='bg-slate-600 font-bold text-gray-50 flex items-center justify-center p-4 m-4'>
+     <BrowserRouter>
+     <Routes>
 
-       
-       
-        
-        <div className='bg-black w-full h-screen text-center text-white font-bold m-4'>
+<Route path='/' element={<Home />}/>
+<Route path='/about' element={<About />}/>
+<Route path='/sign-in' element={<Signin />}/>
+<Route path='/profile' element={<Profile />}/>
+<Route path='/sign-uo' element={<Signup />}/>
 
-         
-        </div>
-       
-       
-       
-       
-
-        
-      </nav>
+     </Routes>
+     
+     </BrowserRouter>
     </>
   )
 }
